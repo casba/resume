@@ -1,0 +1,71 @@
+% LaTeX file for resume 
+% This file uses the resume document class (res.cls)
+
+\documentclass[10pt]{res} 
+%\usepackage{helvetica} % uses helvetica postscript font (download helvetica.sty)
+%\usepackage{newcent}   % uses new century schoolbook postscript font 
+\newsectionwidth{0pt}  % So the text is not indented under section headings
+\usepackage{fancyhdr}  % use this package to get a 2 line header
+\renewcommand{\headrulewidth}{0pt} % suppress line drawn by default by fancyhdr
+\setlength{\headheight}{24pt} % allow room for 2-line header
+\setlength{\headsep}{24pt}  % space between header and text
+\setlength{\headheight}{24pt} % allow room for 2-line header
+\pagestyle{fancy}     % set pagestyle for document
+\topmargin=-0.5in % start text higher on the page
+  
+\begin{document}
+\thispagestyle{empty} % this page has no header  
+
+\begin{center}
+\textbf{\LARGE{Walter Delevich}}\\
+659 Washington Street\\
+Brighton, MA 02136\\
+(847)-280-1722 \\
+walter.delevich@gmail.com
+\end{center}
+
+\begin{resume}
+  
+\section{\large{Experience}}
+\vspace{8pt} 
+\textbf{Athenahealth} \\
+{\sl \small{Senior Member of Technical Staff - Backend Platform\hfill September 2015 - Current }}
+\vspace{8pt} 
+  \begin{itemize} \itemsep -2pt % reduce space between items
+    \item Created a command line application to interactively generate a number of project skeletons which would serve as a base for developers migrating away from the athena's old perl monolith and to a service based approach. These skeletons would have built in support for Docker and Jenkins pipelines. They would also serve to establish conventions as to how projects are structured, how test suites are written, and so on.
+    \item Created a backend service that ties into the command line application. This service would be responsible for tracking the various services at athena and aggregating information for the purposes of documentation and discoverability. It is also responsible for the management of core services for applications it manages. Currently this involves automatically provisioning credentials used in our authentication workflow, automatically gathering coarse-grained authentication information from API specification files, and transforming and providing that coarse-grained data to our API Gateway so that the policies may be enforced.
+    \item Implemented, proposed, and supported a number tools to enhance developer productivity. This included: a site that aggregated documentation and contact info for internal services and tools, built-in middleware tooling for static and dynamic HTML, perl linting and validation rules, and a perldoc site.
+    \item Was responsible for maintence and feature additions to athena's perl-based web application framework.
+  \end{itemize}
+
+\textbf{Chase Paymentech} \\
+{\sl \small{Applications Developer - Batch Payments Processing\hfill    July 2011 - July 2015 } }
+\vspace{8pt} 
+  \begin{itemize} \itemsep -2pt
+    \item Worked on a 24/7 transaction processing system, written in C for the VOS operating system. Was responsible for encoding interchange (per-transaction fee) rules for all major credit issuers (Visa, Mastercard, etc...).
+    \item Was a lead developer on bi-annual regulatory releases. Responsiblities included requirements planning, implementation, release readiness, and 
+  \end{itemize} \vspace{-6pt}
+ 
+\textbf{Trizetto} \\
+{\sl \small{Intern\hfill June - August 2010 }}
+\vspace{8pt} 
+  \begin{itemize} \itemsep -2pt % reduce space between items
+    \item Worked on an internal tool for task management. The tool was written in Grails with a MySQL datastore.
+    \item Assisted in the research of a cloud based implementation of the companies software product.
+  \end{itemize}
+
+\section{\large{Education}}
+\vspace{8pt} 
+\textbf{University of Illinois Chicago} \\
+{\sl Bachelors of Science, Computer Science \hfill August 2007 - May 2011 }
+  
+\section{\large{Technical Skills}}
+\vspace{16pt}
+\begin{itemize} \itemsep -2pt % reduce space between items
+  \item \textbf{Languages}: Experienced in C, JavaScript (nodejs), SQL, and Perl. Functional in Python, C++, and Golang.
+  \item \textbf{Technologies}: Experience with Postgres, Redis, Docker, DC/OS, and various AWS services. Some experience with Puppet, Consul, 
+\end{itemize}
+
+
+\end{resume} 
+\end{document}
